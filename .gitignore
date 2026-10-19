@@ -1,0 +1,10 @@
+.godot/
+__pycache__/
+*.py[cod]
+artifacts/
+local/
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db

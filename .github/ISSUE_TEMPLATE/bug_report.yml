@@ -1,0 +1,25 @@
+name: Reproducible bug
+description: Report a verifier or fixture failure with enough detail to reproduce it.
+title: "bug: "
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and command to reproduce
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS, Python and Godot versions
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Remove personal paths, tokens and private environment details from logs and receipts.
