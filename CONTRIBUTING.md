@@ -4,10 +4,10 @@ Small contributions with a reproducible result are welcome. Open a focused issue
 
 ## Develop
 
-Python 3.11+ is sufficient for the verifier tests; no pip dependencies are needed:
+Python 3.11+ is sufficient for all offline tests; no pip dependencies are needed:
 
 ```bash
-python -B -m unittest discover -s tests -v
+python -B scripts/check.py
 ```
 
 For changes to the Godot fixture or engine invocation, run the workbench too:

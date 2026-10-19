@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "scope": "Selected reusable source recovered from existing project mirrors. No assets, model weights, secrets or live configurations. Adapted file hashes are tracked by Git.",
+  "source_files": [
+    {
+      "source_project": "mac-auxiliary",
+      "source_relative": "mac_controller.py",
+      "source_sha256": "9ab2e5ae8b944520c0c95d9816ba216ac316449d7a175cf1b13758d8a55ca9e5",
+      "destination": "pipelines/mac-auxiliary/mac_controller.py",
+      "adapted": true
+    },
+    {
+      "source_project": "mac-auxiliary",
+      "source_relative": "mac_art.py",
+      "source_sha256": "dcfb23f96069571e191603525bd256c63f21cfe01d4e6c2e74e9d36db32ef10b",
+      "destination": "pipelines/mac-auxiliary/mac_art.py",
+      "adapted": true
+    },
+    {
+      "source_project": "mac-auxiliary",
+      "source_relative": "mac_runner.py",
+      "source_sha256": "bbc0489b90962aadeea27436534d62e01541ed9386b9e8b757cb65a4752b9ea3",
+      "destination": "pipelines/mac-auxiliary/mac_runner.py",
+      "adapted": true
+    },
+    {
+      "source_project": "mac-auxiliary",
+      "source_relative": "test_mac_controller.py",
+      "source_sha256": "38ed4885f6a012791f2ac352b13c8e9ddc41fb784c44d6f4cd15ad27eba6cec2",
+      "destination": "pipelines/mac-auxiliary/test_mac_controller.py",
+      "adapted": true
+    },
+    {
+      "source_project": "mac-auxiliary",
+      "source_relative": "test_mac_art.py",
+      "source_sha256": "59b3796a49d1fec95dbef5bfe06ab8a0e7512381b6ed7e31e7c7a723640aa3ca",
+      "destination": "pipelines/mac-auxiliary/test_mac_art.py",
+      "adapted": true
+    },
+    {
+      "source_project": "mac-auxiliary",
+      "source_relative": "mac_aux.py",
+      "source_sha256": "9ed8912b1e6385f2ed526c84fd361b0155411a5cee5a22d3c1561dd234f3949a",
+      "destination": "pipelines/mac-auxiliary/mac_aux.py",
+      "adapted": true
+    },
+    {
+      "source_project": "mac-auxiliary",
+      "source_relative": "mac_aux_mcp.py",
+      "source_sha256": "8e8479a9357b9f18356e0a60880e1f4809371e0f6fbd9da64c5c0f5688088188",
+      "destination": "pipelines/mac-auxiliary/mac_aux_mcp.py",
+      "adapted": true
+    },
+    {
+      "source_project": "neongrid",
+      "source_relative": "neongrid_photo_mesh.py",
+      "source_sha256": "17b934ae3639d2337319f65aa9af6ea909e15c308a68ce0680ae093464313e92",
+      "destination": "pipelines/photo-mesh/neongrid_photo_mesh.py",
+      "adapted": true
+    },
+    {
+      "source_project": "neongrid",
+      "source_relative": "test_neongrid_photo_mesh.py",
+      "source_sha256": "98808a297f61258e708ccef98ead76011382c9776792ce20f343d457183534a2",
+      "destination": "pipelines/photo-mesh/test_neongrid_photo_mesh.py",
+      "adapted": true
+    },
+    {
+      "source_project": "neongrid",
+      "source_relative": "studio_jobs.py",
+      "source_sha256": "aeb16ef815ec5d9d415f407b0584f57839416f8892e022c392886f3f2a1af431",
+      "destination": "pipelines/blender/studio_jobs.py",
+      "adapted": true
+    },
+    {
+      "source_project": "neongrid",
+      "source_relative": "blender_review_worker.py",
+      "source_sha256": "941f18010bb54f8833cbdd3bb8b603b3dc05c0b8d5f6056470c823d6722d0f54",
+      "destination": "pipelines/blender/blender_review_worker.py",
+      "adapted": true
+    },
+    {
+      "source_project": "neongrid",
+      "source_relative": "studio_mcp.py",
+      "source_sha256": "ea5ec618e8f8139665fc0d1a8c1079abd3a41176546e908ea1950522ca4af896",
+      "destination": "pipelines/blender/studio_mcp.py",
+      "adapted": true
+    },
+    {
+      "source_project": "neongrid",
+      "source_relative": "test_studio_jobs.py",
+      "source_sha256": "10b3c3e428a7d1dee9e0be76e46f65348a14ba199e1083176f6b1a84716bd5b2",
+      "destination": "pipelines/blender/test_studio_jobs.py",
+      "adapted": true
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "prepare-editable.py",
+      "source_sha256": "d2a0a241656ce418d8f16095c2e912d61f4b093582ca5d88975c9ab27570dde1",
+      "destination": "pipelines/blender/prepare-editable.py",
+      "adapted": false
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "geometry-topology.py",
+      "source_sha256": "37971f83e1a800bb3f3d6d59ddbee884a33d50bb3249c3e5f61b269dd71604bd",
+      "destination": "pipelines/blender/geometry-topology.py",
+      "adapted": false
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "review-asset.py",
+      "source_sha256": "91cbfdbee864f22ddded9db69299c8a1ccbe05c9281d327ba621246f23592f3b",
+      "destination": "pipelines/blender/review-asset.py",
+      "adapted": false
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "inspect-trellis-dump.py",
+      "source_sha256": "7ebf1ed3244f5315f89b65a34f0c2d9cb85a58f0cf10d2dd7506f00a0d7b6373",
+      "destination": "pipelines/native-metal/inspect-trellis-dump.py",
+      "adapted": false
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "validation/test_dump_inspector.py",
+      "source_sha256": "e2e8b48cb979767f8e36af0ee930b46bbda7496f3fac929803dc113320c6b67e",
+      "destination": "pipelines/native-metal/validation/test_dump_inspector.py",
+      "adapted": true
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "post-replay-quality.cpp",
+      "source_sha256": "ab539096b094543e2b1898a5f7697a45d919cb3baddebf5762998fc8cf34021c",
+      "destination": "pipelines/native-metal/post-replay-quality.cpp",
+      "adapted": false
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "quality-job-v1/pinned-sources/guard-model.py",
+      "source_sha256": "85e40ac2fff873913eb398e8ca4682785bcc824af3a80711abf9092b0da7e90c",
+      "destination": "pipelines/native-metal/quality-job/pinned-sources/guard-model.py",
+      "adapted": true
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "quality-job-v1/pinned-sources/manual-queue-lease.py",
+      "source_sha256": "d88d9b1649eeea6d75c9da134a3656721a09c0e5ac633f0a65de3fd8f6f566db",
+      "destination": "pipelines/native-metal/quality-job/pinned-sources/manual-queue-lease.py",
+      "adapted": true
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "quality-job-v1/pinned-sources/mac_runner.py",
+      "source_sha256": "bbc0489b90962aadeea27436534d62e01541ed9386b9e8b757cb65a4752b9ea3",
+      "destination": "pipelines/native-metal/quality-job/pinned-sources/mac_runner.py",
+      "adapted": true
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "quality-job-v1/quality-job.py",
+      "source_sha256": "3b11b181ec4d64bcf11386a890a559f66f39822b516a7f7d4df8483885b0b371",
+      "destination": "pipelines/native-metal/quality-job/quality-job.py",
+      "adapted": true
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "quality-job-v1/test-quality-job.py",
+      "source_sha256": "8a84e7d545372c3d0239c50fc806e8b52e1bdfce01a7f48546e61089ffa512e5",
+      "destination": "pipelines/native-metal/quality-job/test-quality-job.py",
+      "adapted": true
+    },
+    {
+      "source_project": "golden-sun-modern",
+      "source_relative": "build-replay-quality.py",
+      "source_sha256": "739f35bbff9772436de9230de6334652cbb6d6c6d35d0a27df098abb0b398a15",
+      "destination": "pipelines/native-metal/build-replay-quality.py",
+      "adapted": true
+    }
+  ],
+  "historical_receipts": [
+    {
+      "path": "qa/mac-asset-production-v1/isaac-001/submission.json",
+      "sha256": "fe98204a0dadf2b13029ef5b56684e33ec521d632c8de444d6da13ac629c25b6"
+    },
+    {
+      "path": "qa/mac-asset-production-v1/isaac-002/plan.json",
+      "sha256": "adf4e13136262a47391fe4ed934e9b61a66947ee4ee10bee2f41cfba9437aecc"
+    },
+    {
+      "path": "qa/mac-asset-production-v1/isaac-003/plan.json",
+      "sha256": "2faf1d9243344678c05ea8a82d34c1bb31a319c6ed12ef857f73c631362326f1"
+    },
+    {
+      "path": "qa/mac-asset-production-v1/replay-quality-build-receipt.json",
+      "sha256": "1dbdb151ef08ec7a097290f175eb200d2ad39d475ee011d19bc42224dfd4f61e"
+    }
+  ]
+}

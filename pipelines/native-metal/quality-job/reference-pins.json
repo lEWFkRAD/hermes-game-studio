@@ -1,0 +1,79 @@
+{
+  "sourceCommit": "883346efb49bd3b46875ea996cb9f195b954d525",
+  "modelRevision": "a57397bd3d351599d9729fc144b3f87c3f87d65b",
+  "cliSha256": "c93dddc85d23e4e7776d438087f9526849ee51e248feb6e10a2bf2df19fe5a8d",
+  "weights": [
+    {
+      "name": "birefnet.gguf",
+      "bytes": 882749024,
+      "sha256": "10c5dd4dcac904cf81c9a16180eb66f167dd52ab55867f54a44567b0b2babbc1"
+    },
+    {
+      "name": "dinov3.gguf",
+      "bytes": 323657920,
+      "sha256": "0dd4ffd4b46a248f5b7d49c35275d68461fbf73f57ddb4c1fa8afb4f7bb45a0d"
+    },
+    {
+      "name": "shape_dec.gguf",
+      "bytes": 881361568,
+      "sha256": "0de7c7a675022dd8696d526a9279e5a50b2a35c8a79452f434a72dc53d40f169"
+    },
+    {
+      "name": "shape_flow_512.gguf",
+      "bytes": 1376125952,
+      "sha256": "29b639f4ff22ded8f91b619376a835f64b9874b0ebcadb9ac6c305195bf5d1f9"
+    },
+    {
+      "name": "ss_dec.gguf",
+      "bytes": 147379392,
+      "sha256": "2790b5eecb261cc877d9bf175ce2bd6dd48cd65be8c042c5f5bc023dfca01cf7"
+    },
+    {
+      "name": "ss_flow.gguf",
+      "bytes": 1376059040,
+      "sha256": "ea6d8a42b20661a5c6a52e5ffbdc1df7aca9b212792193873b418c69f871422c"
+    },
+    {
+      "name": "tex_dec.gguf",
+      "bytes": 881344576,
+      "sha256": "88b4fced46455e02f316664d5c43584a311921dd9a1cdc1b7b7d981cca9214d4"
+    },
+    {
+      "name": "tex_flow_512.gguf",
+      "bytes": 1376178176,
+      "sha256": "389a2cbdda59d53b21e5989650d9d36b7ac603266eaef06712cd07a9fc377210"
+    },
+    {
+      "name": "shape_flow_1024.gguf",
+      "bytes": 1376125952,
+      "sha256": "997e9fc10ab95fda11c4cd1cbaf425101980ac36a2ef80e9c83e0b9c4bfc9680"
+    },
+    {
+      "name": "tex_flow_1024.gguf",
+      "bytes": 1376178176,
+      "sha256": "cb2cb3aee74ba09c018f918ed8c146bc7e4f96335b61fa0d1fc1ff1a7811e6da"
+    }
+  ],
+  "runtimeLibraries": [
+    {
+      "name": "libggml.0.24.0.dylib",
+      "sha256": "750ae4c78a84620eb24d409175c05bcfa5b3161132fc968ce9e72342e662841c"
+    },
+    {
+      "name": "libggml-blas.0.24.0.dylib",
+      "sha256": "2e76e668adadf6687ad08554fa4d4b2972962dba10a2fb8b76c007aa3a766a05"
+    },
+    {
+      "name": "libggml-cpu.0.24.0.dylib",
+      "sha256": "d294b99e45397585ca05ff0a8a86c60a1f18d44086e3e55cc91fdd96bade6301"
+    },
+    {
+      "name": "libggml-metal.0.24.0.dylib",
+      "sha256": "66973cd5a44a8978f85e324b826b56e92e6b2a7bb5f2b660eff832d132dfcba8"
+    },
+    {
+      "name": "libggml-base.0.24.0.dylib",
+      "sha256": "8e6900e358754cebe147eb9630db63aa3abd4db250c0011c42a748fef0c2ba45"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Contribution proposal
 
-The first contribution is a small engine-verification workflow: an original Godot fixture, a portable skill, and inspectable evidence receipts. It can support a broader Hermes studio without prescribing its architecture.
+This workbench packages existing game-development tools into separable contribution candidates: durable generation/recovery, native Metal job control and export, Blender review with evidence, and engine verification. A focused adapter or acceptance workflow can be contributed without requiring adoption of the whole stack.
 
-Before proposing integration upstream, read the current [Hermes contribution guide](https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md) and search code plus open and merged issues/PRs. Improve an existing effort where possible. This repository's publication is not an upstream endorsement or accepted integration.
+Before proposing integration, read the current [Hermes contribution guide](https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md) and inspect existing code, issues and PRs. Publication here is not an upstream endorsement or accepted integration. No message or PR has been sent upstream by publishing this repository.
 
-The next useful boundaries are recorded in [ROADMAP.md](ROADMAP.md). See [CONTRIBUTING.md](CONTRIBUTING.md) to work on this repository.
+See [ROADMAP.md](ROADMAP.md) for extraction and qualification work and [CONTRIBUTING.md](CONTRIBUTING.md) for local development.

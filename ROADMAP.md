@@ -1,17 +1,27 @@
-# Small roadmap
+# Roadmap
 
-This prototype starts with one dependable loop and grows through demonstrable slices.
+## Recovered and included
 
-- [x] Original Godot fixture with win, loss and reset behavior.
-- [x] Isolated import, gameplay regression and scene-boot checks.
-- [x] Hash-bound source inputs, logs and JSON receipts.
-- [x] Portable agent skill and handoff workflow.
-- [x] Verifier failure-path tests and CI configuration.
-- [ ] Godot engine CI on explicitly pinned Windows/Linux versions.
-- [ ] Rendered frame and input replay acceptance for the fixture.
-- [ ] Native export plus clean-environment package boot.
-- [ ] One focused GLB acceptance tool: start with import and dependency checks, then real deformation and material review.
-- [ ] A measured end-to-end Hermes task using the skill.
-- [ ] Align with the upstream Hermes studio direction when an integration contract exists.
+- [x] Mac queue, ComfyUI image workflows, native mesh and music MCP adapters.
+- [x] Durable photo-to-mesh submission, recovery and artifact collection.
+- [x] Native Metal pinned quality packages, owned guard/lease, dump inspection and replay extension.
+- [x] Blender editable preparation, topology/material review and persistent review MCP.
+- [x] Godot fixture, engine-verification skill and receipts.
+- [x] Source provenance and portable offline regression suites.
 
-No completion date or upstream commitment is implied. Engine, asset and agent integrations should earn their own acceptance evidence.
+## Existing work awaiting careful extraction
+
+- [ ] Earlier FLUX reference-generation/staging tools, with an explicit supported runtime profile.
+- [ ] Project-specific character assembly, material repair, rigging and LOD recipes, using original distributable fixtures.
+- [ ] Durable backend application integration contract and installer; the client alone is included today.
+
+## New qualification and integration work
+
+- [ ] Fresh native Metal end-to-end run of this portable snapshot on an explicitly selected Mac.
+- [ ] Rebuild and qualify the replay extension from its portable build wrapper.
+- [ ] Exercise optional MCP tools through a real Hermes session.
+- [ ] One original asset through reference, mesh, editing and actual engine review.
+- [ ] Pinned Godot engine CI, physical input/render acceptance, frame-time measurements and native export boot.
+- [ ] Align a focused contribution with the upstream Hermes studio’s current integration contract.
+
+Historical successful runs are evidence of the original stack, not completion of these portable integration gates.

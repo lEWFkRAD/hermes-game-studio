@@ -1,0 +1,45 @@
+{
+  "bind": "127.0.0.1",
+  "port": 18080,
+  "api_key": "REPLACE_WITH_A_PRIVATE_RANDOM_KEY",
+  "models": {
+    "image": {
+      "qualified": false,
+      "alias": "sdxl",
+      "port": 8188,
+      "reserve_bytes": 15032385536,
+      "timeout": 1800,
+      "health": "/system_stats",
+      "cmd": [
+        "/absolute/path/to/backend",
+        "--help"
+      ],
+      "checkpoint": "your-licensed-sdxl-checkpoint.safetensors",
+      "comfy_root": "/absolute/path/to/ComfyUI"
+    },
+    "mesh": {
+      "qualified": false,
+      "alias": "trellis-metal-512",
+      "port": 18085,
+      "reserve_bytes": 15032385536,
+      "timeout": 1800,
+      "health": "/health",
+      "cmd": [
+        "/absolute/path/to/backend",
+        "--help"
+      ]
+    },
+    "music": {
+      "qualified": false,
+      "alias": "ace-step",
+      "port": 18086,
+      "reserve_bytes": 15032385536,
+      "timeout": 1800,
+      "health": "/health",
+      "cmd": [
+        "/absolute/path/to/backend",
+        "--help"
+      ]
+    }
+  }
+}

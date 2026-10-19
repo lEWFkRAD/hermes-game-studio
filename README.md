@@ -1,103 +1,68 @@
+<p align="center"><img src="docs/images/studio-banner.svg" alt="Hermes Game Studio — from reference to playable world" width="100%"></p>
 <p align="center">
-  <img src="docs/images/studio-banner.png" alt="Hermes Game Studio — small games, repeatable checks, evidence you can inspect" width="100%">
+<a href="https://github.com/lEWFkRAD/hermes-game-studio/actions/workflows/verify.yml"><img src="https://github.com/lEWFkRAD/hermes-game-studio/actions/workflows/verify.yml/badge.svg" alt="Offline pipeline tests"></a>
+<img src="https://img.shields.io/badge/Python-3.11%2B-3776AB" alt="Python 3.11+">
+<img src="https://img.shields.io/badge/Apple_Silicon-native_Metal-90d8c0" alt="Native Metal pipeline source">
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-76D7BD" alt="MIT"></a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/lEWFkRAD/hermes-game-studio/actions/workflows/verify.yml"><img src="https://github.com/lEWFkRAD/hermes-game-studio/actions/workflows/verify.yml/badge.svg" alt="Verifier tests"></a>
-  <img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square" alt="Python 3.11 or later">
-  <img src="https://img.shields.io/badge/Godot-4.x-478CBF?style=flat-square" alt="Godot 4">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-76D7BD?style=flat-square" alt="MIT license"></a>
-</p>
-
-<p align="center"><b>A tiny, evidence-first workbench for agent-assisted game development.</b><br>
-One original game. A reusable skill. A check you can run again.</p>
+<p align="center"><b>A working collection of tools for agent-assisted game creation.</b><br>Generate references. Build meshes. Inspect the actual asset. Verify the game.</p>
 
 ---
 
-Hermes Game Studio helps an agent take a small Godot game through **import → gameplay checks → scene boot**, then leave a readable receipt. It is an independent community prototype inspired by [Teknium's DIY game studio idea](https://x.com/teknium/status/2112092888821842088), ready to adapt as that work develops.
+This repository brings together the reusable parts of our existing game-development stack: **Mac image generation, native TRELLIS.2, durable mesh jobs, Blender preparation and review, and Godot verification**. It is an independent community project inspired by [Teknium’s DIY game studio direction](https://x.com/teknium/status/2112092888821842088).
 
-### What's in the box
+The first release only exposed a small Godot fixture. This expanded edition recovers the asset pipeline built across NeonGrid and the subsequent native Metal experiments. These are separately usable components; a single automated end-to-end studio is still being qualified.
 
-| Piece | What it does |
-| :--- | :--- |
-| **Signal Garden** | An original, playable grid game with collection, hazards, an exit, and restart. No external art assets. |
-| **`game-dev-verify`** | A portable skill for Hermes and compatible agents, with a practical game-development handoff workflow. |
-| **`studio.py`** | A dependency-free Python runner that creates an isolated candidate, runs Godot, preserves logs, and writes a JSON receipt. |
-| **Failure-aware checks** | Script errors, nonzero exits, timeouts, and missing or misleading success markers are treated as failures. |
+### The workbench
 
-### Run the workbench
+| Stage | Included tools | What you get |
+| :--- | :--- | :--- |
+| **Reference & audio** | [Mac queue + MCP](pipelines/mac-auxiliary/README.md) | SDXL text/image-to-image workflows, instrumental music adapter, stable request IDs, owned processes and resource admission. |
+| **Native 3D** | [Native Metal pipeline](pipelines/native-metal/README.md) | Pinned Q8 weights, 1024 geometry/PBR profile, immutable job packages, guarded launch, saved-dump inspection and replay/export extension. |
+| **Durable mesh jobs** | [Photo-to-mesh client](pipelines/photo-mesh/README.md) | One explicit submit, GET-only reconnection, hash-bound recovery, resumable artifact collection. |
+| **Asset finishing** | [Blender toolkit](pipelines/blender/README.md) | Editable `.blend` + GLB preparation, topology audit, original-material and clay review, persistent review jobs and MCP tools. |
+| **Game verification** | [Godot workbench](docs/GODOT.md) | Original Signal Garden fixture, reusable agent skill, import/gameplay/boot checks and receipts. |
 
-Install **Python 3.11+** and a **Godot 4 editor binary**. The current engine validation used **Godot 4.7.1 on Windows**; other versions and platforms need their own engine run.
+### Start without a model
+
+Python 3.11+ is sufficient for all offline tests. No model downloads, backend calls or Blender installation are required:
 
 ```bash
 git clone https://github.com/lEWFkRAD/hermes-game-studio.git
 cd hermes-game-studio
+python -B scripts/check.py
+```
 
-python skills/game-dev-verify/scripts/studio.py doctor --godot /path/to/godot
+Then choose a stage above. Each has its own prerequisites and explicit setup. Model binaries, weights, backend servers and optional MCP dependencies are installed separately. Example Mac workloads are disabled until configured; nothing is registered or started by cloning or testing this repo.
+
+To try the bundled game with a Godot 4 editor:
+
+```bash
 python skills/game-dev-verify/scripts/studio.py check --godot /path/to/godot --output artifacts
 ```
 
-On Windows, replace `python` with `py -3.14` if appropriate and quote the executable path:
+### Build with evidence
 
-```powershell
-py -3.14 -B skills/game-dev-verify/scripts/studio.py check --godot "C:/Tools/Godot/Godot_console.exe" --output artifacts
-```
+1. Record a brief, source/reference rights, scale, axes and the intended game camera.
+2. Submit one bounded generation job. Keep its request ID, input hash and settings.
+3. Recover an interrupted connection from the existing job; preserve uncertain submissions.
+4. Inspect geometry and PBR data, export a candidate, and review it in Blender.
+5. Do the required retopology, materials, rigging and animation work. A generated mesh is a candidate, not an accepted character.
+6. Import into the game, inspect the actual rendered result, then check gameplay, performance and export separately.
 
-If `godot` is on PATH, omit `--godot`. You can also set `GODOT_BIN`.
+See [workflow and handoff](docs/WORKFLOW.md), [validation scope](docs/VALIDATION.md), and the [recovery manifest](docs/RECOVERY.json). Local runtime receipts are ignored by Git.
 
-Each check creates a fresh `artifacts/<run-id>/` with a project copy, separate logs, and `receipt.json`. Exit codes: **0** passed, **1** checks failed, **2** a prerequisite or output-location check blocked the run. Existing runs are preserved. The runner executes only the bundled fixture; it does not verify arbitrary game directories.
+### Evidence and boundaries
 
-### Play Signal Garden
+The portable Python suites cover queue limits, duplicate prevention, ambiguous submissions, artifact recovery, native package integrity, malformed dump rejection, Blender review recovery and engine-runner failures. CI runs these offline checks on Windows and Linux; it does **not** run Mac inference, Blender rendering or Godot.
 
-Open `skills/game-dev-verify/assets/signal-garden/project.godot` in Godot and press **F6** on `main.tscn`, or run the project with **F5**.
+The original stack has recorded native Metal generation, textured GLB export and Blender review runs. Those are historical evidence. The extracted Mac launcher and replay builder need a fresh target-machine qualification; their binary hashes deliberately describe the recorded build, not every future rebuild. [Details →](docs/VALIDATION.md)
 
-| Input | Action |
-| :--- | :--- |
-| Arrow keys | Move one tile |
-| Gold cells | Collect all three |
-| Red tiles | Lose the round |
-| Green exit | Win after collecting every cell |
-| R | Restart with a clean state |
+Project-specific character assembly, rigging/LOD recipes, old FLUX staging scripts, game assets and model weights are outside this extraction. [The roadmap](ROADMAP.md) distinguishes existing work awaiting extraction from capabilities still needing implementation or qualification.
 
-The header illustration represents the fixture; it is not a captured gameplay frame. The game intentionally uses simple procedural shapes so the workflow can be reproduced without an asset pipeline.
+### Contribute
 
-### Use the skill
+Start with [CONTRIBUTING.md](CONTRIBUTING.md). The most useful next contribution is a reproducible vertical slice with an original asset and visible acceptance evidence. Upstream alignment is tracked in [CONTRIBUTION.md](CONTRIBUTION.md); this repo is not an official Hermes integration.
 
-Copy the complete [`skills/game-dev-verify`](skills/game-dev-verify) folder into the intended agent's skill library. For Hermes, use your active profile's `skills/` directory. For Codex, use `$CODEX_HOME/skills/` or `~/.codex/skills/`. Keep `scripts/`, `assets/`, `references/`, and `LICENSE` together. Inspect any existing same-named skill before replacing it.
-
-Then ask the agent:
-
-> Use game-dev-verify to check the bundled Signal Garden fixture. Show the receipt and distinguish automated checks from remaining playtest work.
-
-This prototype needs no new MCP server, model provider, or background service. Native Hermes skill loading was verified locally; a complete model-driven game-building session remains unverified.
-
-### What a pass means
-
-| Gate | Current evidence |
-| :--- | :--- |
-| Engine import | Passed locally on Godot 4.7.1 / Windows |
-| Gameplay logic | 12 assertions: fresh state, boundaries, collection, loss, win, and restart |
-| Main scene boot | Passed headlessly |
-| Verifier behavior | 7 Python tests; CI runs these on Windows and Linux |
-| Rendered appearance / physical input | Separate manual acceptance; not certified by this suite |
-| Frame times / native export / other engine platforms | Not yet qualified |
-
-The CI badge covers the Python verifier tests, **not Godot execution**. Read the [validation notes](docs/VALIDATION.md) for exact scope. Runtime receipts contain local paths and environment details; review them before sharing.
-
-### Shape of the repo
-
-```text
-skills/game-dev-verify/
-  SKILL.md                  Agent entry point
-  scripts/studio.py         Bounded verification runner
-  assets/signal-garden/     Original Godot fixture + gameplay assertions
-  references/workflow.md    Asset, playtest, and handoff gates
-tests/test_runner.py        Verifier failure-path tests
-docs/                      Validation notes and visual identity
-```
-
-### Help build it
-
-Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the [small roadmap](ROADMAP.md). Good first additions are a reproducible engine CI job, rendered/input acceptance, or one focused asset-validation check. Keep changes small enough to demonstrate with real evidence.
-
-Built with Codex assistance. Original kit code and procedural fixture: [MIT](LICENSE). Godot and Hermes retain their own licenses and trademarks. This project is not an official Nous Research product.
+Our code is MIT. The replay extension retains the [upstream TRELLIS notice](pipelines/native-metal/LICENSE.trellis.cpp). Model weights, backend software and generated assets have their own terms; this repository does not redistribute them.

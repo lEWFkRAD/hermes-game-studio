@@ -8,3 +8,15 @@ local/
 *.log
 .DS_Store
 Thumbs.db
+
+# Runtime configuration, generated assets, and model payloads
+controller.json
+mac-auxiliary-client.json
+*.sqlite3*
+*.gguf
+*.safetensors
+*.blend
+*.glb
+*.dylib
+*.o
+*.wav
