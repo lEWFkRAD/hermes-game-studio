@@ -1,3 +1,10 @@
+<!-- project-home:start -->
+**[Hermes Game Studio project homepage](https://lewfkrad.github.io/hermes-game-studio/)** · [Documentation](https://github.com/lEWFkRAD/hermes-game-studio/blob/main/docs/WORKFLOW.md)
+
+Agent-assisted game-asset tools spanning references, mesh jobs, review, and playable-world verification.
+
+<!-- project-home:end -->
+
 <p align="center"><img src="docs/images/studio-banner.svg" alt="Hermes Game Studio — from reference to playable world" width="100%"></p>
 <p align="center">
 <a href="https://github.com/lEWFkRAD/hermes-game-studio/actions/workflows/verify.yml"><img src="https://github.com/lEWFkRAD/hermes-game-studio/actions/workflows/verify.yml/badge.svg" alt="Offline pipeline tests"></a>
